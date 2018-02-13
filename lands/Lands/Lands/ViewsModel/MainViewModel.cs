@@ -7,11 +7,14 @@ namespace Lands.ViewsModel
     public class MainViewModel
     {
         #region Views
-        public LoginViewModel MyProperty { get; set; }
+        public LoginViewModel Login { get; set; }
         #endregion
 
         #region Constructor
-
+        public MainViewModel()
+        {
+            this.Login = new LoginViewModel();
+        }
         #endregion
     }
 }
