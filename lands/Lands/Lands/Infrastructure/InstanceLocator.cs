@@ -8,7 +8,10 @@ namespace Lands.Infrastructure
     public class InstanceLocator
     {
         #region Properties
-        public MainViewModel Main { get; set; }
+        public MainViewModel Main {
+            get;
+            set;
+        }
         #endregion
         #region Constructor
         public InstanceLocator()

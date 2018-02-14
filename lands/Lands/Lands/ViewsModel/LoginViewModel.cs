@@ -5,6 +5,7 @@ using System.Text;
 namespace Lands.ViewsModel
 {
     using GalaSoft.MvvmLight.Command;
+    using Lands.Views;
     using System.ComponentModel;
     using System.Windows.Input;
     using Xamarin.Forms;
@@ -46,9 +47,10 @@ namespace Lands.ViewsModel
         #region Constructor
         public LoginViewModel()
         {
-            Console.Write("loginViewmodel");
             this.IsRemembered = true;
             this.IsEnabled = true;
+            this.Email = "jf@hotmail.com";
+            this.Password = "1234";
         }
         #endregion
         #region Commands
@@ -92,10 +94,11 @@ namespace Lands.ViewsModel
             }
             this.IsRunning = false;
             this.IsEnabled = true;
-            await Application.Current.MainPage.DisplayAlert(
-                  "Ok",
-                  "Success",
-                  "Accept");
+            this.Email = string.Empty;
+            this.Password = string.Empty;
+
+            MainViewModel.GetInstance().Lands = new LandsViewModel();
+            await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());
         }
        
         #endregion
