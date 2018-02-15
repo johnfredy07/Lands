@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Lands.ViewsModel
+﻿namespace Lands.ViewsModel
 {
     using GalaSoft.MvvmLight.Command;
     using Lands.Views;
-    using System.ComponentModel;
     using System.Windows.Input;
     using Xamarin.Forms;
     public class LoginViewModel : BaseViewModel
