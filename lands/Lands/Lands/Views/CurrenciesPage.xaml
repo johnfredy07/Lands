@@ -5,10 +5,14 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="Currencies">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Currencies"
+        <ScrollView
+            BindingContext="{Binding Currencies}">
+            <StackLayout>
+                <Label 
+                Text="{Binding Currencies.Code}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

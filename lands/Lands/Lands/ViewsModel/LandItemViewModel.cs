@@ -21,6 +21,7 @@ namespace Lands.ViewsModel
         private async void SelectLand()
         {
             MainViewModel.GetInstance().Land = new LandViewModel(this);
+            MainViewModel.GetInstance().Bordes = new CurrenciesViewModel(this.Currencies);
             await Application.Current.MainPage.Navigation.PushAsync(new LandTabbedPage());
         }
         #endregion

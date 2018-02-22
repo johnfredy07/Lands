@@ -5,10 +5,14 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="Borders">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Bordes"
+        <ScrollView
+            BindingContext="{Binding Borders}">
+            <StackLayout>
+                <Label 
+                Text=""
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

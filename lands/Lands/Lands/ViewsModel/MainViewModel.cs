@@ -18,6 +18,11 @@
             get;
             set;
         }
+
+        public CurrenciesViewModel Bordes {
+            get;
+            set;
+        }
         #endregion
 
         #region Constructor
